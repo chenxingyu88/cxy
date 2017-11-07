@@ -1,0 +1,26 @@
+<!--logs.wxml-->
+<view class='box'>
+  <scroll-view scroll-x="true" style="height:51px;line-height:51px;background:#f0f0f0;">
+      <view class="weui-navbar" style="width:{{bodyList.length*80}}px;">
+        <block wx:for-items="{{bodyList}}" wx:for-item="item" wx:key="{{index}}">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick" style='float:left;padding: 0 10px'>
+            <view class="weui-navbar__title">{{item.title}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="width:{{windowHeight/bodyList.length/windowHeight*100}}%; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+  </scroll-view>
+
+
+  <view class='lists' wx:for='{{list}}'>
+    <view class='roomType'>
+      <image src='{{item.url}}'></image>
+      <text class='title'>{{item.title}}</text>
+    </view>
+  </view>
+  <button class='btn'>客栈预定</button>
+</view>  
+
+
+ 
+ 

@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="btn-area">
+    <navigator url="" hover-class="navigator-hover">
+      <view style='background: green'><image src='../../image/nav3.png'></image></view>
+      <text>旅游攻略</text>
+    </navigator>
+    <navigator url="../hotel/hotel" open-type="redirect" hover-class="other-navigator-hover">
+      <view style='background: red'><image src='../../image/nav4.png'></image></view>
+      <text>客栈预定</text>
+    </navigator>
+    <navigator url="" open-type="switchTab" hover-class="other-navigator-hover">
+      <view style='background: orange'><image src='../../image/nav2.png'></image></view>
+      <text>推荐行程</text> 
+    </navigator>
+     <navigator url="" open-type="switchTab" hover-class="other-navigator-hover">
+       <view style='background: blue'><image src='../../image/nav1.png'></image></view>
+       <text>门店导航</text> 
+     </navigator>
+</view>
+<view class='title'>
+  <input placeholder='蓬莱旅游热门搜索'></input>
+</view>
+ <view class='cont' wx:for="{{list}}">
+  <view class='cont_list'>
+    <view class='imgs'><image src='{{item.url}}'></image></view> 
+    <text>{{item.title}}</text>    
+  </view>
+</view> 

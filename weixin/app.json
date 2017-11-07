@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/find",
+    "pages/trip/trip",
+    "pages/hotel/hotel"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#e02912",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"icon/1.png",
+        "selectedIconPath":"icon/a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "icon/2.png",
+        "selectedIconPath": "icon/b.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/trip/trip",
+        "iconPath": "icon/3.png",
+        "selectedIconPath": "icon/c.png",
+        "text": "行程"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
